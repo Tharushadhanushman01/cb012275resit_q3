@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #2c3855;
+  --primary-color-dark: #435681;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.univ__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.univ__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.univ__link a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.univ__link a:hover {
+  color: var(--primary-color);
+}
+
+.header__container {
+  padding: 1rem;
+  text-align: center;
+}
+
+.header__image__container {
+  background: linear-gradient(
+      to right,
+      rgba(44, 56, 85, 0.9),
+      rgba(100, 125, 187, 0.1)
+    ),
+    url("../images/20.jpeg") center/cover no-repeat;
+  border-radius: 2rem;
+  min-height: 300px;
+}
+
+.header__content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.header__content p {
+  color: var(--extra-light);
+}
+
+/* Form and Reservation System Styles */
+#reservation-form, #donation-section, #purchase-donate-section, #order-details {
+  background-color: var(--white);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: var(--max-width);
+  text-align: left;
+}
+
+#reservation-form label, #donation-section label, #purchase-donate-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+#reservation-form input[type="number"], #reservation-form select,
+#purchase-donate-section input[type="text"], #donation-section select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color-dark);
+}
+
+#purchase-and-donate-section {
+  background-color: var(--white);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: var(--max-width);
+  text-align: center; /* Center text and content */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Spacing between buttons */
+  flex-wrap: wrap; /* Wrap buttons for smaller screens */
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Donation Section Styles */
+#donation-section .form-group {
+  margin-bottom: 20px;
+}
+
+#donation-section input[type="text"],
+#donation-section select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color-dark);
+}
+
+#donation-success {
+  color: green;
+  margin-top: 10px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--extra-light);
+  padding: 20px 0;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.footer__col h3, .footer__col h4 {
+  margin-bottom: 10px;
+}
+
+.footer__col p {
+  margin-bottom: 5px;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.footer__col p:hover {
+  color: var(--text-dark);
+}
+
+.footer__bar {
+  text-align: center;
+  color: var(--text-light);
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header__content h1 {
+    font-size: 2rem;
+  }
+
+  .univ__links {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__image__container {
+    min-height: 200px;
+  }
+
+  .header__content {
+    padding: 10px;
+  }
+}
